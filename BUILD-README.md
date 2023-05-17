@@ -5,22 +5,27 @@ The image will be based on the latest version of Alpine and will include Apache2
 ## OPTIONAL - Define ENVIRONMENT variables
 
 You can (optionally) define environnement variables that will change configurations in the container.  As so:
-
---------------------------------------------------------------------------------------------------------------------------------------
-- VARIABLE NAME		| EXAMPLE								| DEFAULT VALUE			     -
---------------------------------------------------------------------------------------------------------------------------------------
-- `SERVER_ADMIN` 	| `name@domain.tld`							| `you@example.com`		     -
-- `HTTP_SERVER_NAME` 	| `www.servername.com`							| `www.example.com`		     -
--			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#servername)	|				     -
-- `HTTPS_SERVER_NAME` 	| `www.servername.com`							| `www.example.com`		     -
--			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#servername)	|				     -
-- `LOG_LEVEL`		| `info`								| `info`		     	     -
--			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#loglevel)	|				     -
-- `TZ`			| `America/New_York`							| `UTC`			     	     -
--			| Ref (https://www.php.net/manual/timezones.php)			|				     -
-- `PHP_MEMORY_LIMIT`	| `512M`|								| `256M`			     -
---------------------------------------------------------------------------------------------------------------------------------------
-
+```
+-----------------------------------------------------------------------------------------------------------------------------------
+  VARIABLE NAME		| EXAMPLE								| DEFAULT VALUE
+-----------------------------------------------------------------------------------------------------------------------------------
+  SERVER_ADMIN 	        | name@domain.tld							| you@example.com
+  
+  HTTP_SERVER_NAME   	| www.servername.com							| www.example.com
+ 			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#servername)	|
+  
+  HTTPS_SERVER_NAME 	| www.servername.com							| www.example.com
+ 			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#servername)	|
+  
+  LOG_LEVEL		| info								        | info
+ 			| Ref (https://httpd.apache.org/docs/2.4/fr/mod/core.html#loglevel)	|
+  
+  TZ			| America/New_York							| UTC
+ 			| Ref (https://www.php.net/manual/timezones.php)			|
+  
+  PHP_MEMORY_LIMIT	| 512M								        | 256M
+-----------------------------------------------------------------------------------------------------------------------------------
+```
 ### How to Build
 
 Run the following command to trigger the Docker build:

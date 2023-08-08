@@ -29,7 +29,7 @@ This repository contains the necessary information to deploy the PHP application
   * Step 3 - Run using Docker
 
   ```
-  docker run --name testapp -p 80 testapp
+  docker run --name testapp -p 80:80 testapp
   ```
 
   * Step 4 - Visit on web browser
